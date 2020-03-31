@@ -1,0 +1,75 @@
+//start mongo db local 
+mongod --dbpath=C:/mongodb-data
+
+//github
+npm init
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Kibadango13/CursoDeNodeKfc.git
+git push -u origin master
+
+
+//angular
+npm install -g @angular/cli
+ng new my-workspace --createApplication ="false"
+cd my-workspace
+ng generate application my-app
+ng generate library my-lib
+ng server --open
+
+//angular create componets
+ng generate component global/header
+ng generate component global/logo
+ng generate component global/search
+ng generate component global/util-nav
+ng generate component global/menu
+ng generate component global/footer
+
+ng generate component home
+ng generate component hero
+ng generate component shop-features
+
+npm install config
+mkdir config
+vi config/default.json
+
+
+ // validator to have a unique email address must import to model in back end  (node)--> users
+ npm install --save mongoose-unique-validator
+ npm install --save mongoose-validator
+
+ //encrypts our password in backend 
+ npm install --save bcrypt
+
+ // create and validate token in backend 
+ npm install --save jsonwebtoken
+ 
+
+ mongod --dbpath=C:/mongodb-data
+npm init
+npm install express --save
+npm run dev
+npm install --save-dev cross-env
+npm install --save-dev chai-http
+npm install mongoose
+npm install bcrypt --save
+npm run dev
+npm install --save-dev cross-env
+
+export NODE_ENV=production
+$ node my-app.js
+
+
+//mongooose-validator NNo utlizar
+ https://www.npmjs.com/package/mongoose-validator
+
+
+// express validator
+npm install --save express-validator
+
+//express validator a clean approach to using express validator 
+https://dev.to/nedsoft/a-clean-approach-to-using-express-validator-8go
+
+//express validator manual 
+

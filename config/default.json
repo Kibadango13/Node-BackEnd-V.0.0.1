@@ -1,0 +1,26 @@
+{
+    "server" :{
+        "host":"localhost",
+        "port":3000
+    },
+    "auth":{
+        "secretKey":"SECRET_KEY",
+        "tokenExpiresIn":"1h",
+        "tokenExpiresInSeconds":"3600"
+    },
+    "crypt":{
+        "hashSalt":10
+    },
+    "databasePruebas":{
+        "uri" : "mongodb://127.0.0.1:27017/nodeapp",
+        "options":{
+            "useNewUrlParser":true
+            ,"poolSize":10
+            ,"useUnifiedTopology":true
+        }
+    }
+}
+
+
+
+
