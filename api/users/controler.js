@@ -10,6 +10,7 @@ let errorInfo = {};
 async function create(req, res) {
 
     try {
+ 
         const newUser= req.body;
         const persistednewUser = await User.create(newUser);
 
@@ -32,22 +33,14 @@ async function login(req, res) {
     try {
         const creds = req.body;
         const {email, password} = creds;
-        if(!email){
-            mensaje = 'Email is required ';
-            data = {};
-            errorInfo = {};
-           const resp = await responceService.respuestaHttp_400(mensaje,data,errorInfo);
-           return res.status(400).send(resp);
-        }
-        if(!password){
-            mensaje = 'Password is required ';
-            data = {};
-            errorInfo = {};
-           const resp = await responceService.respuestaHttp_400(mensaje,data,errorInfo);
-           return res.status(400).send(resp);
-        }
         const user = await User.findOne({email}).select(['email', 'password']);
-
+        if(!user){
+            mensaje = 'Invalidad  email or password';
+            data = {};
+            errorInfo = {};
+           const resp = await responceService.respuestaHttp_400(mensaje,data,errorInfo);
+           return res.status(400).send(resp);
+        }
 
        // const hashedPassword = bcrypt.hash(password,10 );
         const isMatch = await compareHash(password,user.password);

@@ -73,3 +73,7 @@ https://dev.to/nedsoft/a-clean-approach-to-using-express-validator-8go
 
 //express validator manual 
 
+
+ // validator to have a unique email address must import to model in back end  (node)--> users
+ npm install --save mongoose-unique-validator
+
